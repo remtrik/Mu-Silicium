@@ -29,6 +29,8 @@
   # Timer
   gArmTokenSpaceGuid.PcdArmArchTimerSecIntrNum|29
   gArmTokenSpaceGuid.PcdArmArchTimerIntrNum|30
+  gArmTokenSpaceGuid.PcdArmArchTimerVirtIntrNum|27
+  gArmTokenSpaceGuid.PcdArmArchTimerHypIntrNum|26
 
   # SmBios
   gSiliciumPkgTokenSpaceGuid.PcdSmbiosProcessorModel|"Kirin 659 @ 2.36 GHz"

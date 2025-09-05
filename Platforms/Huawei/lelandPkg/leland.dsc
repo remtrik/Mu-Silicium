@@ -31,7 +31,8 @@
 
 [PcdsFixedAtBuild]
   # DDR Start Adress
-  gArmTokenSpaceGuid.PcdSystemMemoryBase|0x400000
+  gArmTokenSpaceGuid.PcdSystemMemoryBase|0x00400000
+  gArmTokenSpaceGuid.PcdSystemMemorySize|0xBFE00000
 
   # Device Maintainer
   gSiliciumPkgTokenSpaceGuid.PcdDeviceMaintainer|"Rostislav Lastockin"
