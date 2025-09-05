@@ -1,0 +1,15 @@
+[Defines]
+  DEC_SPECIFICATION              = 0x00010005
+  PACKAGE_NAME                   = HisiPkg
+  PACKAGE_GUID                   = c6013a10-758c-4c0d-bd07-e601e6721f86
+  PACKAGE_VERSION                = 0.1
+
+[Includes]
+  Include
+
+[Guids]
+  gHisiPkgTokenSpaceGuid = {0xc8bc553e, 0x12bf, 0x11e6, {0x97, 0x4f, 0x87, 0xf7, 0x7c, 0xfd, 0x52, 0x1d}}
+
+[Protocols]
+
+[PcdsFixedAtBuild]

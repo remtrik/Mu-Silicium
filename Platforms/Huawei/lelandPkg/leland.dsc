@@ -1,0 +1,72 @@
+##
+#  Copyright (c) 2011 - 2022, ARM Limited. All rights reserved.
+#  Copyright (c) 2014, Linaro Limited. All rights reserved.
+#  Copyright (c) 2015 - 2020, Intel Corporation. All rights reserved.
+#  Copyright (c) 2018, Bingxing Wang. All rights reserved.
+#  Copyright (c) Microsoft Corporation.
+#
+#  SPDX-License-Identifier: BSD-2-Clause-Patent
+##
+
+################################################################################
+#
+# Defines Section - statements that will be processed to create a Makefile.
+#
+################################################################################
+[Defines]
+  PLATFORM_NAME                  = leland
+  PLATFORM_GUID                  = A1B48372-32DF-4294-BE88-10BF0EE9F11B
+  PLATFORM_VERSION               = 0.1
+  DSC_SPECIFICATION              = 0x00010005
+  OUTPUT_DIRECTORY               = Build/lelandPkg
+  SUPPORTED_ARCHITECTURES        = AARCH64
+  BUILD_TARGETS                  = RELEASE|DEBUG
+  SKUID_IDENTIFIER               = DEFAULT
+  FLASH_DEFINITION               = lelandPkg/leland.fdf
+  USE_CUSTOM_DISPLAY_DRIVER      = 0
+  HAS_BUILD_IN_KEYBOARD          = 0
+
+[BuildOptions]
+  *_*_*_CC_FLAGS = -DHAS_BUILD_IN_KEYBOARD=$(HAS_BUILD_IN_KEYBOARD)
+
+[PcdsFixedAtBuild]
+  # DDR Start Adress
+  gArmTokenSpaceGuid.PcdSystemMemoryBase|0x400000
+
+  # Device Maintainer
+  gSiliciumPkgTokenSpaceGuid.PcdDeviceMaintainer|"Rostislav Lastockin"
+
+  # UEFI Stack Addresses
+  gEmbeddedTokenSpaceGuid.PcdPrePiStackBase|0x9FFB0000
+  gEmbeddedTokenSpaceGuid.PcdPrePiStackSize|0x00020000
+
+  # SmBios
+  gSiliciumPkgTokenSpaceGuid.PcdSmbiosSystemManufacturer|"Huawei Corporation"
+  gSiliciumPkgTokenSpaceGuid.PcdSmbiosSystemModel|"Honor 9 Lite"
+  gSiliciumPkgTokenSpaceGuid.PcdSmbiosSystemRetailModel|"leland"
+  gSiliciumPkgTokenSpaceGuid.PcdSmbiosSystemRetailSku|"LLD-31"
+  gSiliciumPkgTokenSpaceGuid.PcdSmbiosBoardModel|"Honor 9 Lite"
+
+  # Simple Frame Buffer
+  gSiliciumPkgTokenSpaceGuid.PcdPrimaryFrameBufferWidth|1080
+  gSiliciumPkgTokenSpaceGuid.PcdPrimaryFrameBufferHeight|2160
+  gSiliciumPkgTokenSpaceGuid.PcdPrimaryFrameBufferColorDepth|32
+
+[PcdsDynamicDefault]
+  gEfiMdeModulePkgTokenSpaceGuid.PcdVideoHorizontalResolution|1080
+  gEfiMdeModulePkgTokenSpaceGuid.PcdVideoVerticalResolution|2160
+  gEfiMdeModulePkgTokenSpaceGuid.PcdSetupVideoHorizontalResolution|1080
+  gEfiMdeModulePkgTokenSpaceGuid.PcdSetupVideoVerticalResolution|2160
+  gEfiMdeModulePkgTokenSpaceGuid.PcdSetupConOutColumn|180
+  gEfiMdeModulePkgTokenSpaceGuid.PcdSetupConOutRow|155
+  gEfiMdeModulePkgTokenSpaceGuid.PcdConOutColumn|180
+  gEfiMdeModulePkgTokenSpaceGuid.PcdConOutRow|155
+
+[LibraryClasses]
+  DeviceMemoryMapLib|lelandPkg/Library/DeviceMemoryMapLib/DeviceMemoryMapLib.inf
+  DeviceGuidLib|lelandPkg/Library/DeviceGuidLib/DeviceGuidLib.inf
+  AcpiDeviceUpdateLib|SiliciumPkg/Library/AcpiDeviceUpdateLibNull/AcpiDeviceUpdateLibNull.inf
+
+[Components]
+
+!include Hi6250Pkg/Hi6250Pkg.dsc.inc
