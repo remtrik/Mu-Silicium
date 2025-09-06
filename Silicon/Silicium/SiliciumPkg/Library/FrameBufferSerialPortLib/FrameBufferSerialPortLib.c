@@ -361,6 +361,8 @@ SerialPortInitialize ()
     return EFI_UNSUPPORTED;
   }
 
+  DisplayMemoryRegion.Address += 288;
+
   // Get Secondary Frame Buffer Offset
   UINT32 Offset = FixedPcdGet32 (PcdSecondaryFrameBufferOffset);
 

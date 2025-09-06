@@ -233,6 +233,8 @@ RegisterDisplays (
     return Status;
   }
 
+  DisplayMemoryRegion.Address += 288;
+
   // Get Frame Buffer Infos
   Width      = FixedPcdGet32 (PcdPrimaryFrameBufferWidth);
   Height     = FixedPcdGet32 (PcdPrimaryFrameBufferHeight);
