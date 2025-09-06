@@ -32,13 +32,12 @@
 [PcdsFixedAtBuild]
   # DDR Start Adress
   gArmTokenSpaceGuid.PcdSystemMemoryBase|0x00400000
-  gArmTokenSpaceGuid.PcdSystemMemorySize|0xBFE00000
 
   # Device Maintainer
   gSiliciumPkgTokenSpaceGuid.PcdDeviceMaintainer|"Rostislav Lastockin"
 
   # UEFI Stack Addresses
-  gEmbeddedTokenSpaceGuid.PcdPrePiStackBase|0x9FFB0000
+  gEmbeddedTokenSpaceGuid.PcdPrePiStackBase|0x12201000
   gEmbeddedTokenSpaceGuid.PcdPrePiStackSize|0x00020000
 
   # SmBios
@@ -58,10 +57,10 @@
   gEfiMdeModulePkgTokenSpaceGuid.PcdVideoVerticalResolution|2160
   gEfiMdeModulePkgTokenSpaceGuid.PcdSetupVideoHorizontalResolution|1080
   gEfiMdeModulePkgTokenSpaceGuid.PcdSetupVideoVerticalResolution|2160
-  gEfiMdeModulePkgTokenSpaceGuid.PcdSetupConOutColumn|180
-  gEfiMdeModulePkgTokenSpaceGuid.PcdSetupConOutRow|155
-  gEfiMdeModulePkgTokenSpaceGuid.PcdConOutColumn|180
-  gEfiMdeModulePkgTokenSpaceGuid.PcdConOutRow|155
+  gEfiMdeModulePkgTokenSpaceGuid.PcdSetupConOutColumn|135
+  gEfiMdeModulePkgTokenSpaceGuid.PcdSetupConOutRow|113
+  gEfiMdeModulePkgTokenSpaceGuid.PcdConOutColumn|135
+  gEfiMdeModulePkgTokenSpaceGuid.PcdConOutRow|113
 
 [LibraryClasses]
   DeviceMemoryMapLib|lelandPkg/Library/DeviceMemoryMapLib/DeviceMemoryMapLib.inf

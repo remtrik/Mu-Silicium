@@ -22,7 +22,7 @@
   gArmPlatformTokenSpaceGuid.PcdClusterCount|2
 
   # GIC
-  gArmTokenSpaceGuid.PcdGicDistributorBase|0xe82b1000
+  gArmTokenSpaceGuid.PcdGicDistributorBase|0xe82b0000
   gArmTokenSpaceGuid.PcdGicRedistributorsBase|0xe82b2000
   gArmTokenSpaceGuid.PcdGicInterruptInterfaceBase|0xe82b2000
 

@@ -9,6 +9,7 @@ cat "./Build/lelandPkg/${TARGET_BUILD_MODE}_CLANGPDB/FV/LELAND_UEFI.fd-bootshim.
 ./Resources/mkbootimg \
   --kernel ./Resources/bootpayload.bin \
   --ramdisk ./Resources/ramdisk \
+  --cmdline "loglevel=4 coherent_pool=512K page_tracker=on slub_min_objects=12 unmovable_isolate1=2:192M,3:224M,4:256M printktimer=0xfff0a000,0x534,0x538 androidboot.selinux=enforcing buildvariant=user" \
   --board "" \
   --base 0x00478000 \
   --pagesize 2048 \
