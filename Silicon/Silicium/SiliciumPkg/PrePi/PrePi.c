@@ -130,7 +130,7 @@ PrePiMain (IN UINT64 StartTimeStamp)
   Status = MemoryPeim (UefiMemoryBase, UefiMemorySize);
   if (EFI_ERROR (Status)) {
     DEBUG ((EFI_D_ERROR, "Failed to Enable MMU and Build Memory HOBs!\n"));
-    //ASSERT_EFI_ERROR (Status);
+    ASSERT_EFI_ERROR (Status);
   }
 
   // Build Stack HOB
@@ -234,8 +234,6 @@ CEntryPoint ()
     // Clear Display
     ZeroMem ((VOID *)DisplayRegion.Address, DisplayRegion.Length);
   }
-
-  DisplayRegion.Address += 288;
 
   //
   // !!! Make this Debug only !!!
