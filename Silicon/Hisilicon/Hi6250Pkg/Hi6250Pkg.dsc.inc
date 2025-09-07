@@ -22,6 +22,7 @@
   gArmPlatformTokenSpaceGuid.PcdClusterCount|2
 
   # GIC
+  gSiliciumPkgTokenSpaceGuid.PcdTimerFreqOverwrite|1920000
   gArmTokenSpaceGuid.PcdGicDistributorBase|0xe82b1000
   gArmTokenSpaceGuid.PcdGicRedistributorsBase|0xe82b2000
   gArmTokenSpaceGuid.PcdGicInterruptInterfaceBase|0xe82b2000
@@ -45,6 +46,11 @@
   # SmBios Memory Extras
   gSiliciumPkgTokenSpaceGuid.PcdSmbiosMemorySpeed|1600
   gSiliciumPkgTokenSpaceGuid.PcdSmbiosMemoryType|30
+
+[Components]
+  EmbeddedPkg/Universal/MmcDxe/MmcDxe.inf
+  HisiPkg/Drivers/SmBiosTableDxe/SmBiosTableDxe.inf
+  Hi6250Pkg/Drivers/Hi6250GpioDxe/Hi6250GpioDxe.inf
 
 [LibraryClasses]
   PlatformPrePiLib|Hi6250Pkg/Library/PlatformPrePiLib/PlatformPrePiLib.inf
