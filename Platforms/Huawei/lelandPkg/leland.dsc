@@ -49,6 +49,7 @@
   gSiliciumPkgTokenSpaceGuid.PcdSmbiosBoardModel|"Honor 9 Lite"
 
   # Simple Frame Buffer
+  gSiliciumPkgTokenSpaceGuid.PcdPrimaryFrameBufferOffset|0x00000120
   gSiliciumPkgTokenSpaceGuid.PcdPrimaryFrameBufferWidth|1080
   gSiliciumPkgTokenSpaceGuid.PcdPrimaryFrameBufferHeight|2160
   gSiliciumPkgTokenSpaceGuid.PcdPrimaryFrameBufferColorDepth|32

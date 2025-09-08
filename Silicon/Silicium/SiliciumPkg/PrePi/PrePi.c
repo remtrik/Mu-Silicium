@@ -224,6 +224,8 @@ CEntryPoint ()
   // Locate 'Display Reserved' Memory Region
   Status = LocateMemoryMapAreaByName ("Display Reserved", &DisplayRegion);
   if (!EFI_ERROR (Status)) {
+    // Offset base of 'Display Reserved' Memory Region
+    DisplayRegion.Address += FixedPcdGet32 (PcdPrimaryFrameBufferOffset);;
     // Clear Display
     ZeroMem ((VOID *)DisplayRegion.Address, DisplayRegion.Length);
   }
@@ -231,6 +233,8 @@ CEntryPoint ()
   // Locate 'Display_Reserved' Memory Region
   Status = LocateMemoryMapAreaByName ("Display_Reserved", &DisplayRegion);
   if (!EFI_ERROR (Status)) {
+    // Offset base of 'Display Reserved' Memory Region
+    DisplayRegion.Address += FixedPcdGet32 (PcdPrimaryFrameBufferOffset);;
     // Clear Display
     ZeroMem ((VOID *)DisplayRegion.Address, DisplayRegion.Length);
   }

@@ -22,6 +22,7 @@
   TimerLib
 
 [FixedPcd]
+  gSiliciumPkgTokenSpaceGuid.PcdPrimaryFrameBufferOffset
   gSiliciumPkgTokenSpaceGuid.PcdPrimaryFrameBufferWidth
   gSiliciumPkgTokenSpaceGuid.PcdPrimaryFrameBufferHeight
   gSiliciumPkgTokenSpaceGuid.PcdPrimaryFrameBufferColorDepth

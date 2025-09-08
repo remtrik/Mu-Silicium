@@ -233,7 +233,8 @@ RegisterDisplays (
     return Status;
   }
 
-  DisplayMemoryRegion.Address += 288;
+  // Offset base of 'Display Reserved' Memory Region
+  DisplayMemoryRegion.Address += FixedPcdGet32 (PcdPrimaryFrameBufferOffset);
 
   // Get Frame Buffer Infos
   Width      = FixedPcdGet32 (PcdPrimaryFrameBufferWidth);

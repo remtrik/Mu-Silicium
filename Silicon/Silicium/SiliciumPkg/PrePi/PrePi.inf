@@ -70,3 +70,4 @@
   gEmbeddedTokenSpaceGuid.PcdPrePiStackSize
 
   gSiliciumPkgTokenSpaceGuid.PcdSmbiosSystemModel
+  gSiliciumPkgTokenSpaceGuid.PcdPrimaryFrameBufferOffset
