@@ -34,5 +34,6 @@
 !endif
 
   INF Hi6250Pkg/Drivers/Hi6250GpioDxe/Hi6250GpioDxe.inf
+  INF ArmPlatformPkg/Drivers/PL061GpioDxe/PL061GpioDxe.inf
 
   INF MdeModulePkg/Universal/BdsDxe/BdsDxe.inf

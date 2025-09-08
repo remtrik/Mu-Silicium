@@ -21,6 +21,8 @@
   gArmPlatformTokenSpaceGuid.PcdCoreCount|8
   gArmPlatformTokenSpaceGuid.PcdClusterCount|2
 
+  gArmTokenSpaceGuid.PcdVFPEnabled|1
+
   # GIC
   gSiliciumPkgTokenSpaceGuid.PcdTimerFreqOverwrite|1920000
   gArmTokenSpaceGuid.PcdGicDistributorBase|0xe82b1000
@@ -50,6 +52,7 @@
 [Components]
   EmbeddedPkg/Universal/MmcDxe/MmcDxe.inf
   HisiPkg/Drivers/SmBiosTableDxe/SmBiosTableDxe.inf
+  ArmPlatformPkg/Drivers/PL061GpioDxe/PL061GpioDxe.inf
   Hi6250Pkg/Drivers/Hi6250GpioDxe/Hi6250GpioDxe.inf
 
 [LibraryClasses]
