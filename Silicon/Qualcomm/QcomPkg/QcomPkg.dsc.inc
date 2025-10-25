@@ -40,6 +40,7 @@
   QcomPkg/Drivers/DdrClockHandlerDxe/DdrClockHandlerDxe.inf
   QcomPkg/Drivers/DisplayReEnablerDxe/DisplayReEnablerDxe.inf
   QcomPkg/Drivers/PeripheralInitDxe/PeripheralInitDxe.inf
+  QcomPkg/Drivers/StorageWriteProtectDxe/StorageWriteProtectDxe.inf
 
   # Custom Snapdragon Apps
   QcomPkg/Applications/MassStorage/MassStorage.inf
