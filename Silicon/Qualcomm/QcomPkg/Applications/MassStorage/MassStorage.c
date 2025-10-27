@@ -304,6 +304,7 @@ EFI_STATUS
 MassStorageHandler ()
 {
   UINT8 CurrentLun = 0;
+  UINT8 Shutdown   = 0;
 
   // Check Storage Type
   if (EmmcBlockIoProtocol != NULL) {
@@ -324,20 +325,38 @@ MassStorageHandler ()
     // Get Current Key Press
     gST->ConIn->ReadKeyStroke (gST->ConIn, &Key);
 
-    // Start Mass Storage
     if (Key.UnicodeChar == CHAR_CARRIAGE_RETURN) {
-      StartMassStorage (UfsLunData[CurrentLun].BlockIoProtocol);
+      if (Shutdown == 1) {
+        // Shutdown device
+        gRT->ResetSystem (EfiResetShutdown, EFI_SUCCESS, 0, NULL);
+      } else {
+        // Start Mass Storage
+        StartMassStorage (UfsLunData[CurrentLun].BlockIoProtocol);
 
-      // Display Default Splash
-      DisplayBootGraphic (BG_MSD_DEFAULT);
+        // Display Default Splash
+        DisplayBootGraphic (BG_MSD_DEFAULT);
+      }
     }
 
     // Select Next LUN
     if (Key.ScanCode == SCAN_UP && CurrentLun < 7) {
-      // Verify LUN Data
-      if (UfsLunData[CurrentLun + 1].BlockIoProtocol != NULL) {
-        CurrentLun++;
+      // Clear Shutdown State
+      if (Shutdown == 1) {
+        Shutdown = 0;
+	CurrentLun = 0;
+        // Clear Input Options
+        PrintUI (L"                                           ", -1);
+      } else {
+        // Verify LUN Data
+        if (UfsLunData[CurrentLun + 1].BlockIoProtocol != NULL) {
+          CurrentLun++;
+        }
       }
+    }
+
+    // Select Shutdown
+    if (Key.ScanCode == SCAN_DOWN && CurrentLun == 0) {
+      Shutdown = 1;
     }
 
     // Select Previous LUN
@@ -348,8 +367,13 @@ MassStorageHandler ()
       }
     }
 
-    // Print Current LUN
-    PrintUI (L"LUN %u", CurrentLun);
+    if (Shutdown == 1) {
+      // Print Shutdown
+      PrintUI(L"Shutdown device", 0);
+    } else {
+      // Print Current LUN
+      PrintUI (L"LUN %u", CurrentLun);
+    }
   }
 
   return EFI_SUCCESS;
