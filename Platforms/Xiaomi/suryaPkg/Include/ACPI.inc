@@ -3,9 +3,9 @@ FILE FREEFORM = 7E374E25-8E01-4FEE-87F2-390C23C606CD {
 # SECTION RAW = Moorea/BERT.aml
 # SECTION RAW = Moorea/BGRT.aml
   SECTION RAW = Moorea/CSRT.aml
-!if $(TARGET) == DEBUG
+#!if $(TARGET) == DEBUG
   SECTION RAW = Moorea/DBG2.aml
-!endif
+#!endif
   SECTION RAW = surya/DSDT.aml
   SECTION RAW = Moorea/FACP.aml
   SECTION RAW = Moorea/FACS.aml

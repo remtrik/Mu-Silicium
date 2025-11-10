@@ -60,6 +60,8 @@
   INF Binaries/surya/QcomPkg/Drivers/SdccDxe/SdccDxe.inf
   INF Binaries/surya/QcomPkg/Drivers/UFSDxe/UFSDxe.inf
 
+  INF QcomPkg/Drivers/StorageWriteProtectDxe/StorageWriteProtectDxe.inf
+
   INF Binaries/surya/QcomPkg/Drivers/TLMMDxe/TLMMDxe.inf
   INF Binaries/surya/QcomPkg/Drivers/VibratorDxe/VibratorDxe.inf
 

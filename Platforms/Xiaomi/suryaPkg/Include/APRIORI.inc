@@ -42,6 +42,8 @@ APRIORI DXE {
   INF Binaries/surya/QcomPkg/Drivers/SdccDxe/SdccDxe.inf
   INF Binaries/surya/QcomPkg/Drivers/UFSDxe/UFSDxe.inf
 
+  INF QcomPkg/Drivers/StorageWriteProtectDxe/StorageWriteProtectDxe.inf
+
   INF FatPkg/EnhancedFatDxe/Fat.inf
 
   INF Binaries/surya/QcomPkg/Drivers/TzDxe/TzDxeLA.inf
