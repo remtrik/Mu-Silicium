@@ -1,0 +1,29 @@
+[Defines]
+  INF_VERSION                    = 0x0010005
+  BASE_NAME                      = StorageWriteProtectDxe
+  FILE_GUID                      = 33DF34AB-9A95-4F84-A5C5-FBA7416B5D50
+  MODULE_TYPE                    = DXE_DRIVER
+  VERSION_STRING                 = 1.0
+  ENTRY_POINT                    = EnableWriteProtect
+
+[Sources]
+  StorageWriteProtectDxe.c
+
+[Packages]
+  MdePkg/MdePkg.dec
+  ArmPlatformPkg/ArmPlatformPkg.dec
+  SiliciumPkg/SiliciumPkg.dec
+  QcomPkg/QcomPkg.dec
+
+[LibraryClasses]
+  PcdLib
+  UefiDriverEntryPoint
+  UefiBootServicesTableLib
+  BaseMemoryLib
+  DebugLib
+
+[Protocols]
+  gEfiStorageWriteProtectProtocolGuid
+
+[Depex]
+  TRUE
