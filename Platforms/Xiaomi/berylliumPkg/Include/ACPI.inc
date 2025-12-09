@@ -1,0 +1,43 @@
+#FILE FREEFORM = 7E374E25-8E01-4FEE-87F2-390C23C606CD {
+# SECTION RAW = Napali/APIC.aml
+# SECTION RAW = Napali/BERT.aml
+# SECTION RAW = Napali/BGRT.aml
+# SECTION RAW = Napali/CSRT.aml
+#!if $(TARGET) == DEBUG
+# SECTION RAW = Napali/DBG2.aml
+#!endif
+# SECTION RAW = beryllium/DSDT.aml
+# SECTION RAW = Napali/FACP.aml
+# SECTION RAW = Napali/FACS.aml
+# SECTION RAW = Napali/GTDT.aml
+# SECTION RAW = Napali/IORT.aml
+# SECTION RAW = Napali/MADT.aml
+# SECTION RAW = Napali/MCFG.aml
+# SECTION RAW = Napali/MSDM.aml
+# SECTION RAW = Napali/PPTT.aml
+# SECTION RAW = Napali/SPCR.aml
+# SECTION RAW = Napali/TPM2.aml
+# SECTION RAW = Napali/XSDT.aml
+# SECTION UI = "AcpiTables"
+#}
+FILE FREEFORM = 7E374E25-8E01-4FEE-87F2-390C23C606CD {
+  SECTION RAW = Divar/APIC.aml
+# SECTION RAW = Divar/BERT.aml
+# SECTION RAW = Divar/BGRT.aml
+# SECTION RAW = Divar/CSRT.aml
+!if $(TARGET) == DEBUG
+# SECTION RAW = Divar/DBG2.aml
+!endif
+#  SECTION RAW = fog/DSDT.aml
+# SECTION RAW = Divar/FADT.aml
+  SECTION RAW = Divar/FACP.aml
+  SECTION RAW = Divar/GTDT.aml
+# SECTION RAW = Divar/IORT.aml
+# SECTION RAW = Divar/MCFG.aml
+# SECTION RAW = Divar/MSDM.aml
+  SECTION RAW = Divar/PPTT.aml
+# SECTION RAW = Divar/SPCR.aml
+# SECTION RAW = Divar/TPM2.aml
+# SECTION RAW = Divar/XSDT.aml
+  SECTION UI = "AcpiTables"
+}
