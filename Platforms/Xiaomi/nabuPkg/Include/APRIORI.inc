@@ -42,6 +42,8 @@ APRIORI DXE {
   INF Binaries/nabu/QcomPkg/Drivers/SdccDxe/SdccDxe.inf
   INF Binaries/nabu/QcomPkg/Drivers/UFSDxe/UFSDxe.inf
 
+  INF QcomPkg/Drivers/StorageWriteProtectDxe/StorageWriteProtectDxe.inf
+
   INF FatPkg/EnhancedFatDxe/Fat.inf
 
   INF Binaries/nabu/QcomPkg/Drivers/TzDxe/TzDxeLA.inf

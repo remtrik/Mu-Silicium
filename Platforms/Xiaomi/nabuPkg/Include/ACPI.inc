@@ -3,9 +3,9 @@ FILE FREEFORM = 7E374E25-8E01-4FEE-87F2-390C23C606CD {
 # SECTION RAW = Hana/BERT.aml
 # SECTION RAW = Hana/BGRT.aml
   SECTION RAW = Hana/CSRT.aml
-!if $(TARGET) == DEBUG
+#!if $(TARGET) == DEBUG
   SECTION RAW = Hana/DBG2.aml
-!endif
+#!endif
   SECTION RAW = nabu/DSDT.aml
   SECTION RAW = Hana/FACP.aml
 # SECTION RAW = Hana/FPDT.aml
