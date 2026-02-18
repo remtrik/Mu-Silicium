@@ -1,0 +1,31 @@
+name: "Test"
+description: Test1.
+title: "[test1] - <title>"
+labels: [
+  "test1"
+]
+body:
+  - type: textarea
+    id: description
+    attributes:
+      label: "test1"
+      placeholder: A test1...
+    validations:
+      required: true
+  - type: checkboxes
+    id: terms
+    attributes:
+      label: test1
+      description: test1 ...
+      options:
+        - label: I am asking a sensible question.
+          required: true
+        - label: test1.
+          required: true
+        - label: test1.
+          required: true
+
+
+
+
+
