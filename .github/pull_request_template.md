@@ -1,4 +1,4 @@
-Please go to the `Preview` tab and select the appropriate template:
+Please select the right template under `Preview` tab:
 
-* [Generic Changes](?expand=1&template=PULL_REQUEST_TEMPLATE/generic-changes.md)
-* [Device support](?expand=1&template=PULL_REQUEST_TEMPLATE/device-support.md)
+* [Generic Changes](?expand=1&template=generic-changes.md)
+* [Device support](?expand=1&template=device-support.md)
